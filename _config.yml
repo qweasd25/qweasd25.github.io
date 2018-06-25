@@ -7,13 +7,13 @@ title: Time with you
 subtitle: 时光与你有染
 description: Let life be beautiful like summer flowers and death like autumn leaves.
 keywords: 个人博客,blog,技术博客
-author: qweasd25
+author: 陌小念
 language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://qweasd25.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:

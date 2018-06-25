@@ -2,9 +2,9 @@
 title: 个人博客的搭建和迁移
 date: 2017-05-22 22:45:48
 tags: hexo
-categories: 博客
+categories: 技术
 copyright: true
-top: 100
+top: 400
 ---
 ## 最初的梦想
     从开始接触三剑客开始，就拥有一个梦想，想要一个自己的个人网站。但是对于服务器那块，我真的有点不来san！哎呀呀土话啦！！
@@ -21,10 +21,13 @@ top: 100
 #### 1.github配置
 ##### 注册github账号
 ##### 配置SSH-Key（一般平时在github上放项目的，都是配置过的）
+
+不会的可以参考 [github账号在本地配置SSH key](https://qweasd25.github.io/2017/07/22/github%E8%B4%A6%E5%8F%B7%E5%9C%A8%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AESSH%20key/)
+
 #### 2.安装[Hexo](https://hexo.io/zh-cn/docs/)（点击查看官网）
 
 ```
-1. $ npm install -g hexo-cli
+$ npm install -g hexo-cli
 ```
 安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。
 
