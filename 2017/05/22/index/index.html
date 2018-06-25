@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="Time with you">
 <meta property="og:description" content="最初的梦想从开始接触三剑客开始，就拥有一个梦想，想要一个自己的个人网站。但是对于服务器那块，我真的有点不来san！哎呀呀土话啦！！ 在此之前，我有过很多次想要搭建个人博客的意向，看过很多篇文章，也问过远哥。噗，他的回答永远都感觉很容易。我这个人一听很容易，就不想弄了。好了废话说多了，下面进入正题。 本文主要分为三个大章节：  方法一：采用github + hexo 搭建个人博客 方法二：克隆心仪的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-25T07:09:28.000Z">
+<meta property="og:updated_time" content="2018-06-25T07:12:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人博客的搭建和迁移">
 <meta name="twitter:description" content="最初的梦想从开始接触三剑客开始，就拥有一个梦想，想要一个自己的个人网站。但是对于服务器那块，我真的有点不来san！哎呀呀土话啦！！ 在此之前，我有过很多次想要搭建个人博客的意向，看过很多篇文章，也问过远哥。噗，他的回答永远都感觉很容易。我这个人一听很容易，就不想弄了。好了废话说多了，下面进入正题。 本文主要分为三个大章节：  方法一：采用github + hexo 搭建个人博客 方法二：克隆心仪的">
@@ -369,7 +369,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,585
+                  2,600
                 </span>
               
 
@@ -415,7 +415,8 @@
 <li>关于博客迁移</li>
 </ol>
 <p>好了，下面看文章吧~~</p>
-<h3 id="方法一：采用github-hexo-搭建个人博客"><a href="#方法一：采用github-hexo-搭建个人博客" class="headerlink" title="方法一：采用github + hexo 搭建个人博客"></a>方法一：采用github + hexo 搭建个人博客</h3><h4 id="1-github配置"><a href="#1-github配置" class="headerlink" title="1.github配置"></a>1.github配置</h4><h5 id="注册github账号"><a href="#注册github账号" class="headerlink" title="注册github账号"></a>注册github账号</h5><h5 id="配置SSH-Key（一般平时在github上放项目的，都是配置过的）"><a href="#配置SSH-Key（一般平时在github上放项目的，都是配置过的）" class="headerlink" title="配置SSH-Key（一般平时在github上放项目的，都是配置过的）"></a>配置SSH-Key（一般平时在github上放项目的，都是配置过的）</h5><h4 id="2-安装Hexo（点击查看官网）"><a href="#2-安装Hexo（点击查看官网）" class="headerlink" title="2.安装Hexo（点击查看官网）"></a>2.安装<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo</a>（点击查看官网）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1. $ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h3 id="方法一：采用github-hexo-搭建个人博客"><a href="#方法一：采用github-hexo-搭建个人博客" class="headerlink" title="方法一：采用github + hexo 搭建个人博客"></a>方法一：采用github + hexo 搭建个人博客</h3><h4 id="1-github配置"><a href="#1-github配置" class="headerlink" title="1.github配置"></a>1.github配置</h4><h5 id="注册github账号"><a href="#注册github账号" class="headerlink" title="注册github账号"></a>注册github账号</h5><h5 id="配置SSH-Key（一般平时在github上放项目的，都是配置过的）"><a href="#配置SSH-Key（一般平时在github上放项目的，都是配置过的）" class="headerlink" title="配置SSH-Key（一般平时在github上放项目的，都是配置过的）"></a>配置SSH-Key（一般平时在github上放项目的，都是配置过的）</h5><p>不会的可以参考 <a href="https://qweasd25.github.io/2017/07/22/github%E8%B4%A6%E5%8F%B7%E5%9C%A8%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AESSH%20key/">github账号在本地配置SSH key</a></p>
+<h4 id="2-安装Hexo（点击查看官网）"><a href="#2-安装Hexo（点击查看官网）" class="headerlink" title="2.安装Hexo（点击查看官网）"></a>2.安装<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo</a>（点击查看官网）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 <p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;  # 新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
 <p>新建完成后，指定文件夹的目录如下：</p>
@@ -686,7 +687,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
