@@ -1,5 +1,10 @@
 ---
-title: 采用github + hexo 搭建个人博客
+title: 个人博客的搭建和迁移
+date: 2017-05-22 22:45:48
+tags: hexo
+categories: 博客
+copyright: true
+top: 100
 ---
 ## 最初的梦想
     从开始接触三剑客开始，就拥有一个梦想，想要一个自己的个人网站。但是对于服务器那块，我真的有点不来san！哎呀呀土话啦！！
@@ -150,7 +155,7 @@ sidebar:
   #display: remove
 ```
 ##### 7.设置头像和作者名称
-在站点配置文件中，新加一个字段`avatar`，值就是头像的连接地址，这里我使用站内地址，将avatar.png放到本地目录hexo\source\images中；作者名称直接设置站点配置文件中`author`字段的值：
+在站点配置文件中，新加一个字段`avatar`，值就是头像的连接地址，我没有设置，将avatar.png放到本地目录hexo\source\images中；作者名称直接设置站点配置文件中`author`字段的值：
 
 ```
 # Site
@@ -162,7 +167,7 @@ avatar: /images/avatar.png
 language: zh-Hans
 timezone:
 ```
-##### 给文章设置阅读量，启用不蒜子统计，仅限于文章页面显示阅读书，在首页不显示。
+##### 8.给文章设置阅读量，启用不蒜子统计，仅限于文章页面显示阅读书，在首页不显示。
 在主题的配置文件找到`busuanzi_count`字段，把`enable`设置为`true`
 
 ```
@@ -184,7 +189,43 @@ busuanzi_count:
   page_pv_header: <i class="fa fa-file-o"></i>
   page_pv_footer:
 ```
+
+##### 9.Hexo-Next底部logo栏更改
+首先，找到 `\themes\next\layout\_partials\`下面的`footer.swig`文件，打开把这块语句删城跟我一样，别的不用删除，尤其要注意引号，否则会出错哦~~
+
+```
+{% if theme.footer.powered %}
+  <div class="powered-by">{#
+  #}{{ __('footer.powered', '') }}{#
+#}</div>
+{% endif %}
+
+{% if theme.footer.powered and theme.footer.theme.enable %}
+  <span class="post-meta-divider">|</span>
+{% endif %}
+
+{% if theme.footer.theme.enable %}
+  <div class="theme-info">{#
+  #}{{ __('footer.theme') }}{#
+  #}{#
+#}</div>
+{% endif %}
+```
+
+然后，处理中文信息，打开`\themes\next\languages\`下面的文件`zh-Hans.yml`。找到对应位置，修改成跟我类似的喔，随意发展。
+
+```
+footer:
+  powered: " %s 个人博客"
+  theme: 前端/生活/心得
+```
+
 #### 上传到GitHub
+在此部操作之前，建议已经把博客的配置全部设置好。
+
+相关配置可以参考着一篇文章
+[hexo的next主题个性化配置教程](http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html)
+
 打开站点`配置文件`(即更目录下的`_config.yml`)，在最后修改如下代码
 
 ```
@@ -210,8 +251,7 @@ $ hexo d
 ```
 $ npm install hexo-deployer-git --save
 ```
-
-推荐[Hexo-Next底部logo栏更改以及注意事项（附官方文档）](https://www.jianshu.com/p/4fbc57269f1b)
+上传到github之后，以后想在服务器端修改直接输入命令`hexo d -g`。就可以在你的个人博客地址更新了。
 
 ### 方法二：克隆心仪的博客
 
@@ -292,9 +332,3 @@ git commit -m "新建分支源文件"
 git push --set-upstream origin hexo
 ```
 >注：使用－－ set-upstream 去跟踪远程分支。
-
-
-
-
-最后再推荐一篇文章
-[hexo的next主题个性化配置教程](http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html)
