@@ -395,298 +395,26 @@
       
         
           
-            <h2 id="第1章-JavaScript简介"><a href="#第1章-JavaScript简介" class="headerlink" title="第1章 JavaScript简介"></a>第1章 JavaScript简介</h2><ul>
-<li>在1995年，它的主要目的是处理以前由服务器语言负责的一些输入验证操作。</li>
-</ul>
-<h3 id="1-1-JavaScript简史"><a href="#1-1-JavaScript简史" class="headerlink" title="1.1 JavaScript简史"></a>1.1 JavaScript简史</h3><ul>
-<li>主要是写js的最开始的发展历程</li>
-</ul>
-<h3 id="1-2-JavaScript实现"><a href="#1-2-JavaScript实现" class="headerlink" title="1.2 JavaScript实现"></a>1.2 JavaScript实现</h3><ul>
-<li>核心(ECMAScript)</li>
-<li>文档对象模型(DOM)</li>
-<li>浏览器对象模型(BOM)</li>
-</ul>
-<h4 id="1-2-1-ECMAScript"><a href="#1-2-1-ECMAScript" class="headerlink" title="1.2.1 ECMAScript"></a>1.2.1 ECMAScript</h4><p>ECMAScript 规定了这门语言的下列组成部分：</p>
-<ul>
-<li>语法</li>
-<li>类型</li>
-<li>语句</li>
-<li>关键字</li>
-<li>保留字</li>
-<li>操作符</li>
-<li>对象</li>
-</ul>
-<h4 id="1-2-2-文档对象模型-DOM"><a href="#1-2-2-文档对象模型-DOM" class="headerlink" title="1.2.2 文档对象模型(DOM)"></a>1.2.2 文档对象模型(DOM)</h4><blockquote>
-<p>是针对XML但经过扩展用于HTML的应用程序编程接口(API)</p>
-</blockquote>
-<h4 id="1-2-3-浏览器对象模型-BOM"><a href="#1-2-3-浏览器对象模型-BOM" class="headerlink" title="1.2.3 浏览器对象模型(BOM)"></a>1.2.3 浏览器对象模型(BOM)</h4><blockquote>
-<p>支持可以访问和操作浏览器窗口</p>
-</blockquote>
-<ul>
-<li>弹出新浏览器窗口的功能</li>
-<li>移动、缩放和关闭浏览器窗口的功能</li>
-<li>提供浏览器详细信息的 navigator 对象</li>
-<li>提供浏览器所加载页面的详细信息 location 对象</li>
-<li>提供用户显示器分辨率详细信息的 screen 对象</li>
-<li>对 cookies 的支持</li>
-<li>像 XMLHttpRequest 和 IE 的 activeXObject 这样的自定义对象</li>
-</ul>
-<h3 id="1-3-JavaScript-版本"><a href="#1-3-JavaScript-版本" class="headerlink" title="1.3 JavaScript 版本"></a>1.3 JavaScript 版本</h3><ul>
-<li>大多数浏览器在提及对 JavaScript 的支持情况时，一般都以 EMCAScript 兼容性和对 DOM 的支持情况为准。</li>
-</ul>
-<h3 id="1-4-小结"><a href="#1-4-小结" class="headerlink" title="1.4 小结"></a>1.4 小结</h3><p>&emsp;&emsp;JavaScript 是一种专为 网页交互 而设计的脚本语言，由下列三个不同的部分组成:</p>
-<ul>
-<li>EMCAScript， 由 ECMA-262 定义，提供核心语言功能；</li>
-<li>文档对象模型(DOM)，提供访问和操作网页内容的方法和接口；</li>
-<li>浏览器对象模型(BOM)，提供与浏览器交互的方法和接口。</li>
-</ul>
-<h2 id="第2章-在-HTML-中使用-JavaScript"><a href="#第2章-在-HTML-中使用-JavaScript" class="headerlink" title="第2章 在 HTML 中使用 JavaScript"></a>第2章 在 HTML 中使用 JavaScript</h2><h3 id="2-1-lt-script-gt-元素"><a href="#2-1-lt-script-gt-元素" class="headerlink" title="2.1 &lt;script&gt; 元素"></a>2.1 <code>&lt;script&gt;</code> 元素</h3><p><code>&lt;script&gt;</code> 的6个属性：</p>
-<ul>
-<li><code>async</code>:可选。表示应该立即下载脚本，但是不应妨碍页面中的其他操作，比如下载其他资源或者等待加载其他脚本。只对外部脚本文件有效。</li>
-<li><code>charset</code>:可选。表示通过 <code>src</code> 属性指定的代码的字符集。由于大多数浏览器会忽略它的值，因此这个属性很少有人用。</li>
-<li><code>defer</code>:可选。表示脚本可以延迟到文档完全被解析和显示之后再执行。<strong>只对外部脚本文件有效</strong>。IE7及更早版本对嵌入脚本也支持这个属性。</li>
-<li><code>language</code>:已废弃。</li>
-<li><code>src</code>:可选。表示包含要执行代码的外部文件。</li>
-<li><code>type</code>:可选。可以看成是<code>language</code>的替代属性；表示编写代码使用的脚本语言的内容类型（也成为MIME类型）。 默认值是<code>text/javascript</code>。服务器在传送<code>JavaScrpit</code>文件时使用的<code>MIMIE</code>类型通常是<code>application/x-javascript</code>。</li>
-</ul>
-<p>&emsp;&emsp;注意事项:</p>
-<p>&emsp;&emsp;在<code>&lt;script&gt;</code>标签内写<code>&lt;/script&gt;</code>，需要使用转义字符”\”。</p>
-<h4 id="2-1-1-标签的位置"><a href="#2-1-1-标签的位置" class="headerlink" title="2.1.1 标签的位置"></a>2.1.1 标签的位置</h4><ul>
-<li>所有的<code>&lt;script&gt;</code>元素都放在<code>&lt;head&gt;</code>元素中，意味着所有的 JavaScript 代码都被下载、解析和执行完成以后，才能呈现页面的内容。这就导致浏览器在呈现页面是出现延迟，也就是一片空白。</li>
-<li><b>为了避免这个问题</b>，现代WEB应用程序一般都把全部的 JavaScript 应用放在 <code>&lt;body&gt;</code>元素中页面内容的后面。这样用户会因为浏览器窗口显示空白页面的时间缩短而感到打开页面的速度加快了。</li>
-</ul>
-<h4 id="2-1-2-延迟脚本"><a href="#2-1-2-延迟脚本" class="headerlink" title="2.1.2 延迟脚本"></a>2.1.2 延迟脚本</h4><ul>
-<li><code>defer</code>属性，脚本会延迟到整个页面都解析完毕后再运行。 <strong>相当于告诉浏览器立即下载，但延迟执行。</strong></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;Example HTML Page&lt;/title&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot; defer=&quot;defer&quot; src=&quot;example1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot; defer=&quot;defer&quot; src=&quot;example2.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;!-- 这里放内容 --&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;在这个例子中，原本按照 HTML5 规范的脚本先后顺序执行，并且先于 DOMContentLoaded 事件(详见第13章)执行，但是事实上这两个脚本不一定会按照顺序执行，也不一定会先于 DOMContentLoaded 事件执行， <strong>因此最好只包含一个延迟脚本</strong>。</p>
-<p>最佳选择：把延迟脚本放在页面底部。</p>
-<blockquote>
-<p>在 XHTML 文档中，要把 defer 属性设置为 defer=”defer”。</p>
-</blockquote>
-<h3 id="2-1-3-异步脚本"><a href="#2-1-3-异步脚本" class="headerlink" title="2.1.3 异步脚本"></a>2.1.3 异步脚本</h3><ul>
-<li><code>async</code>属性，同样只适用于外部脚本文件，并告诉浏览器立即下载文件。与<code>defer</code>不同的是，标记为<code>async</code>的脚本并不保证按照指定他们的先后顺序执行。例如：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;Example HTML Page&lt;/title&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot; async src=&quot;example1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot; async src=&quot;example2.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;!-- 这里放内容 --&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;上面的例子第二个脚本有可能会在第一个脚本文件之前执行。 <strong>所以要确保两个文件之间互不依赖。</strong> 异步脚本一定会在页面的<code>load</code>时间之前执行，单可能会在 DOMContentLoaded 事件触发之前或之后执行。支持异步脚本的浏览器有 Firefox 3.6、Safari 5 和 Chrome。</p>
-<blockquote>
-<p> 在 XHTML 文档中，要把 defer 属性设置为 async=”async”。</p>
-</blockquote>
-<h4 id="2-1-4-在-XHTML-中的用法"><a href="#2-1-4-在-XHTML-中的用法" class="headerlink" title="2.1.4 在 XHTML 中的用法"></a>2.1.4 在 XHTML 中的用法</h4><p>&emsp;&emsp;XHTML 即可扩展超文本标记语言。一般采用这个<code>&lt;![CDATA[ 内容 ]]&gt;</code></p>
-<blockquote>
-<p> 将页面模式指定为”application/xhtml+xml”的情况下会触发XHTML模式。并不是所有浏览器都支持这种方式提供XHTML文档。</p>
-</blockquote>
-<h4 id="2-1-5-不推荐使用的语法"><a href="#2-1-5-不推荐使用的语法" class="headerlink" title="2.1.5 不推荐使用的语法"></a>2.1.5 不推荐使用的语法</h4><p>&emsp;&emsp;现在已经所有浏览器都支持这个 <code>&lt;script&gt;</code>。所以这个模块了解下就好了。</p>
-<h3 id="2-2-嵌入代码与外部文件"><a href="#2-2-嵌入代码与外部文件" class="headerlink" title="2.2 嵌入代码与外部文件"></a>2.2 嵌入代码与外部文件</h3><p>&emsp;&emsp;使用外部文件的优点：</p>
-<ul>
-<li>可维护性</li>
-<li>可缓存性</li>
-<li>适应未来</li>
-</ul>
-<h3 id="2-3-文档模式"><a href="#2-3-文档模式" class="headerlink" title="2.3 文档模式"></a>2.3 文档模式</h3><ul>
-<li>混杂模式：让IE行为与(包含非标准特性对的)IE5相同</li>
-</ul>
-<blockquote>
-<p>不写 DOCTYPE</p>
-</blockquote>
-<ul>
-<li>标准模式：让IE行为更接近标准</li>
-</ul>
-<blockquote>
-<p>不标准的地方主要体现在处理图片间隙的时候（在表格中使用图片的时候问题最明显）</p>
-</blockquote>
-<blockquote>
-<p>标准模式：一般意义上是指标准模式和准标准模式。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- HTML 4.01 严格型 --&gt;</span><br><span class="line">&lt;!DOCTYPE HTML PUBLIC </span><br><span class="line">&quot;-//W3C//DTD HTML 4.01//EN&quot;</span><br><span class="line">&quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- XHTML 4.01 严格型 --&gt;</span><br><span class="line">&lt;!DOCTYPE HTML PUBLIC </span><br><span class="line">&quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;</span><br><span class="line">&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- HTML 5 --&gt;</span><br><span class="line">&lt;!DOCTYPE HTML&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>准标准模式：有两种类型：过渡型或框架集型。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- HTML 4.01 过渡型 --&gt;</span><br><span class="line">&lt;!DOCTYPE HTML PUBLIC </span><br><span class="line">&quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;</span><br><span class="line">&quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- HTML 4.01 框架集型 --&gt;</span><br><span class="line">&lt;!DOCTYPE HTML PUBLIC </span><br><span class="line">&quot;-//W3C//DTD HTML 4.01 Frameset //EN&quot;</span><br><span class="line">&quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- XHTML 1.0 过渡型 --&gt;</span><br><span class="line">&lt;!DOCTYPEHTML PUBLIC </span><br><span class="line">&quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;</span><br><span class="line">&quot;http://www.w3.org/TR/html4/xhtml1-transitional.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- XHTML 1.0 框架集型 --&gt;</span><br><span class="line">&lt;!DOCTYPE HTML PUBLIC </span><br><span class="line">&quot;-//W3C//DTD XHTML 1.0 Frameset //EN&quot;</span><br><span class="line">&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&quot;&gt;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>如果文档开始出没有发现文档类型声明，则所有浏览器都会默认开启混杂模式</li>
-</ul>
-<h3 id="2-4-元素"><a href="#2-4-元素" class="headerlink" title="2.4 元素"></a>2.4 <noscript>元素</noscript></h3><p>&emsp;&emsp;一般在以下情况会用到</p>
-<ul>
-<li>浏览器不支持脚本</li>
-<li>浏览器支持脚本，但是脚本被禁用</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;Example HTML Page&lt;/title&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot; async src=&quot;example1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">        &lt;script type=&quot;text/javascript&quot; async src=&quot;example2.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;!-- 这里放内容 --&gt;</span><br><span class="line">        &lt;noscript&gt;</span><br><span class="line">            &lt;p&gt;本页面需要浏览器支持(启用)JavaScript。&lt;/p&gt;</span><br><span class="line">        &lt;/noscript&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>脚本无效的情况下，用户会收到一条消息。但在启用脚本的浏览器中用户就看不到，虽然他是页面的一部分。</p>
-</blockquote>
-<h3 id="2-5-小结"><a href="#2-5-小结" class="headerlink" title="2.5 小结"></a>2.5 小结</h3><ul>
-<li>可以用src引入外部或者其他任何域的文件</li>
-<li>所有<code>&lt;script&gt;</code>元素都会按照他们在页面中出现的先后顺序执行(在不使用<code>defer</code>和<code>async</code>的情况下)</li>
-<li>由于浏览器会先解析完不使用<code>defer</code>属性的<code>&lt;script&gt;</code>元素中的代码，然后在解析后面的内容，所以一般应该把<code>&lt;script&gt;</code>元素放在页面最后面，<code>&lt;/body&gt;</code>标签前面</li>
-<li>使用<code>defer</code>属性可以让脚本在文档完全呈现以后再执行。</li>
-<li>使用<code>async</code>属性可以表示当前脚本不必等待其他的脚本，也不必阻塞文档呈现。</li>
-<li>使用<code>&lt;noscript&gt;</code>元素可以指定在不支持脚本的浏览器中显示的替代内容。但在启用了脚本的情况下，浏览器不会显示<code>&lt;noscript&gt;</code>元素中的内容。</li>
-</ul>
-<h2 id="第3章-基本概念"><a href="#第3章-基本概念" class="headerlink" title="第3章 基本概念"></a>第3章 基本概念</h2><ul>
-<li>语法</li>
-<li>数据类型</li>
-<li>流控制语句</li>
-<li>函数</li>
-</ul>
-<p>&emsp;&emsp;由于本章主要按照第3版定义的 ECMAScript 介绍这门语言的基本概念，并就第5版的变化给出说明。</p>
-<h3 id="3-1-语法"><a href="#3-1-语法" class="headerlink" title="3.1 语法"></a>3.1 语法</h3><p>&emsp;&emsp;ECMAScript 的语法相对比较宽松。</p>
-<h4 id="3-1-1-区分大小写"><a href="#3-1-1-区分大小写" class="headerlink" title="3.1.1 区分大小写"></a>3.1.1 区分大小写</h4><p>&emsp;&emsp;ECMAScript 中的一切(变量、函数名和操作符)都区分大小写。</p>
-<h4 id="3-1-2-标识符"><a href="#3-1-2-标识符" class="headerlink" title="3.1.2 标识符"></a>3.1.2 标识符</h4><p>&emsp;&emsp;所谓标识符，就是指变量、函数、属性的名字，或者函数的参数。标识符可以使按照下列各式规则组合起来的一或者多个字符：</p>
-<ul>
-<li>第一个字符必须是一个字母、下划线(_)或一个美元符号($)</li>
-<li>其他字符可以使字母、下划线、美元符号或数字</li>
-<li>采用驼峰大小写，例如：firstChild</li>
-<li><strong>注意：不能把关键字、保留字、true、false和null用作标识符</strong></li>
-</ul>
-<h4 id="3-1-3-注释"><a href="#3-1-3-注释" class="headerlink" title="3.1.3 注释"></a>3.1.3 注释</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//单行注释</span><br><span class="line">/*</span><br><span class="line">* 这是一个多行注释</span><br><span class="line">* 这边二三行前面添加 * ，是为了增加注释的可读性(企业中用的比较多)</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
-<h4 id="3-1-4-严格模式"><a href="#3-1-4-严格模式" class="headerlink" title="3.1.4 严格模式"></a>3.1.4 严格模式</h4><ul>
-<li>严格模式(strict mode)，是为了JavaScript定义一种不同的解析与执行模型。</li>
-<li>在该模式下，一些不确定的行为将得到处理，对一些不安全的操作会抛出错误</li>
-<li>可以在顶部添加</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;use strict&quot;; //这是一个编译指示(pragma)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>也可以在函数内部的上方包含这条编译指示</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function doSomething()&#123;</span><br><span class="line">    &quot;use strict&quot;;</span><br><span class="line">    //函数体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="3-1-5-语句"><a href="#3-1-5-语句" class="headerlink" title="3.1.5 语句"></a>3.1.5 语句</h4><ul>
-<li>ECMAScript 语句最好以分号结束</li>
-<li>把多条语句组合到一个代码块</li>
-</ul>
-<h3 id="3-2-关键字和保留字"><a href="#3-2-关键字和保留字" class="headerlink" title="3.2 关键字和保留字"></a>3.2 关键字和保留字</h3><ul>
-<li>ECMAScript 的全部关键字(带*是第五版新增的)</li>
-</ul>
-<blockquote>
-<p>break do instanceof typeof <br><br>case else new var <br><br>catch finally return void <br><br>continue for switch while <br><br>debugger* function this with <br><br>delete in try</p>
-</blockquote>
-<ul>
-<li>ECMAScript 的全部保留字(第3版定义的)</li>
-</ul>
-<blockquote>
-<p>abstract enum(枚举) int short <br><br>boolean export interface(接口) static <br><br>char final native synchronized(同步的) <br><br>class float package throws <br><br>const goto private transient(短暂的) <br><br>debugger implements(工具) protected volatile <br><br>double import public </p>
-</blockquote>
-<ul>
-<li>第5版把在非严格模式下运行时的保留字缩减为下列这些：</li>
-</ul>
-<blockquote>
-<p>class    enum extends super <br><br>const    export import</p>
-</blockquote>
-<ul>
-<li>在严格模式下，第5版还对以下保留字施加了限制：</li>
-</ul>
-<blockquote>
-<p>implements package public    <br><br>interface private static <br><br>let protected yield</p>
-</blockquote>
-<ul>
-<li>注意，let 和 yield 是第5版新增的保留字；其他保留字都是第3版定义的。为了最大程度地保证兼容性，建议将第3版定义的保留字外加 let 和 yield 作为编程时的参考。</li>
-<li>一般来说最好都不用关键字和保留字作为标识符和属性名。</li>
-<li>除了上面的，ECMA-262第5版对 eval 和 arguments 也做了限制，在严格模式下不能作为标识符或属性名。</li>
-</ul>
-<h3 id="3-3-变量"><a href="#3-3-变量" class="headerlink" title="3.3 变量"></a>3.3 变量</h3><ul>
-<li>松散类型(可以用来保存任何类型的数据)</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>操作符(关键字)</th>
-<th>变量名(标识符)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>var</td>
-<td>message</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>message 未经过初始化之前，值为undefined</p>
-</blockquote>
-<ul>
-<li>尽量使用局部变量，全局变量很难维护。</li>
-<li><strong>给未经声明的变量赋值，在严格模式下会导致抛出 ReferenceError</strong></li>
-<li>可以使用一条语句定义多个变量，只要把每个变量用逗号隔开，如下:</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var message = &quot;hi&quot;,</span><br><span class="line">    found = false,</span><br><span class="line">    age = 29;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>在严格模式下，不能定义名为 <code>eval</code> 或 <code>arguments</code> 的变量，否则会导致语法错误</li>
-</ul>
-<h3 id="3-4-数据类型"><a href="#3-4-数据类型" class="headerlink" title="3.4 数据类型"></a>3.4 数据类型</h3><ul>
-<li>五个基本数据类型:<code>number</code>、<code>boolean</code>、<code>string</code>、<code>null</code>、<code>undefined</code>.</li>
-<li>复杂数据类型:<code>object</code></li>
-</ul>
-<h4 id="3-4-1-typeof-操作符"><a href="#3-4-1-typeof-操作符" class="headerlink" title="3.4.1 typeof 操作符"></a>3.4.1 typeof 操作符</h4><ul>
-<li>typeof 是一个操作符，不是函数。例如<code>typeof null</code>不加圆括号</li>
-<li><code>typeof null</code>这个返回一个<code>object</code>。因为特殊值<code>null</code>被认为是一个空的对象引用</li>
-<li>Safari 5 及之前版本、Chrome 7 及之前本版在对正则表达式调用<code>typeof</code>操作符会返回<code>function</code>，而其他浏览器则返回<code>object</code>.</li>
-<li>从技术角度讲，函数在 ECMAScript 中式对象，不是一种数据类型。然而，函数也确实有一些特殊的属性，因此通过<code>typeof</code>操作符来区分函数和其他对象是有必要的。</li>
-</ul>
-<h4 id="3-4-2-undefined-类型"><a href="#3-4-2-undefined-类型" class="headerlink" title="3.4.2 undefined 类型"></a>3.4.2 undefined 类型</h4><ul>
-<li>建议显式地初始化变量(var a = 1)，因为如果能做到这点，就可以用<code>typeof</code>操作符检测变量是还没有被声明，而不是尚未初始化。</li>
-<li>无论在什么情况下，都没有必要把变量显式的设置为<code>undefined</code>。</li>
-</ul>
-<h4 id="3-4-3-null-类型"><a href="#3-4-3-null-类型" class="headerlink" title="3.4.3 null 类型"></a>3.4.3 null 类型</h4><ul>
-<li>表示一个空对象指针，所以<code>typeof</code>操作符检测结果是<code>object</code>。</li>
-<li>如果定义的变相准备在将来用于保存对象，那么最好将该变量初始化为<code>null</code>。</li>
-<li>检查相应变量是否已经保存了一个对象的引用</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if (car != null)&#123;</span><br><span class="line">    //对car对象执行某些操作</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>实际上，<code>undefined</code> 值是派生自<code>null</code>，因此 ECMA-262 规定对它们的相等性测试要返回<code>true</code>.</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(null == undefined); //true</span><br></pre></td></tr></table></figure>
-<ul>
-<li>想要保存对象的变量还没有真正保存对象，就应该明确的让变量保存<code>null</code>值。</li>
-<li>可以体现<code>null</code>作为空指针的惯例，同时区分<code>null</code>和<code>undefined</code>。</li>
-</ul>
-<h4 id="3-4-4-boolean-类型"><a href="#3-4-4-boolean-类型" class="headerlink" title="3.4.4 boolean 类型"></a>3.4.4 boolean 类型</h4><table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>转换为true的值</th>
-<th>转换为false的值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Boolean</td>
-<td>true</td>
-<td>false</td>
-</tr>
-<tr>
-<td>string</td>
-<td>任何非空字符串</td>
-<td>“”(空字符串)</td>
-</tr>
-<tr>
-<td>Number</td>
-<td>任何非零数字值(包括无穷大)</td>
-<td>0和NaN</td>
-</tr>
-<tr>
-<td>Object</td>
-<td>任何对象</td>
-<td>null</td>
-</tr>
-<tr>
-<td>undefined</td>
-<td>N/A(不适用，not applicable缩写)</td>
-<td>undefined</td>
-</tr>
-</tbody>
-</table>
-<h4 id="3-4-5-number-类型"><a href="#3-4-5-number-类型" class="headerlink" title="3.4.5 number 类型"></a>3.4.5 number 类型</h4><ul>
-<li>十进制</li>
-<li>八进制: 第一位必须是0，然后是八进制数字序列(0~7)，在严格模式下无效</li>
-<li>十六进制: 前两位必须是0x</li>
-<li>在算数计算时，所有以八进制和十六进制表示的数值最终都将被转换成十进制数值。</li>
-</ul>
-<ol>
-<li>浮点数值</li>
-</ol>
+          第1章 JavaScript简介
+在1995年，它的主要目的是处理以前由服务器语言负责的一些输入验证操作。
 
-          
+1.1 JavaScript简史
+主要是写js的最开始的发展历程
+
+1.2 JavaScript实现
+核心(ECMAScript)
+文档对象模型(DOM)
+浏览器对象模型(BOM)
+
+1.2
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/28/高程学习笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -865,24 +593,16 @@
       
         
           
-            <p>注意：在 windows 下，需要先下载 git bash ，安装之后再进行以下操作</p>
-<h4 id="1-配置账户"><a href="#1-配置账户" class="headerlink" title="1.配置账户"></a>1.配置账户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name “your_username”  #设置用户名</span><br><span class="line"></span><br><span class="line">$ git config --global user.email “your_registered_github_Email”  #设置邮箱地址(建议用注册giuhub的邮箱)</span><br></pre></td></tr></table></figure>
-<h4 id="2-检查-SSH-key-是否存在"><a href="#2-检查-SSH-key-是否存在" class="headerlink" title="2.检查 SSH key 是否存在"></a>2.检查 SSH key 是否存在</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/.ssh 或cd .ssh</span><br></pre></td></tr></table></figure>
-<p>如果没有则提示： No such file or directory</p>
-<p>如果有则进入~/.ssh路径下（ls查看当前路径文件，rm * 删除所有文件）</p>
-<h4 id="3-如果不存在，生成新的-SSH-key"><a href="#3-如果不存在，生成新的-SSH-key" class="headerlink" title="3.如果不存在，生成新的 SSH key"></a>3.如果不存在，生成新的 SSH key</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~  #保证当前路径在”~”下</span><br><span class="line"></span><br><span class="line">$ ssh-keygen -t rsa -C &quot;xxxxxx@yy.com&quot;  #建议填写自己真实有效的邮箱地址</span><br><span class="line"></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line"></span><br><span class="line">Enter file in which to save the key (/c/Users/xxxx_000/.ssh/id_rsa):   #不填直接回车</span><br><span class="line"></span><br><span class="line">Enter passphrase (empty for no passphrase):   #输入密码（可以为空）</span><br><span class="line"></span><br><span class="line">Enter same passphrase again:   #再次确认密码（可以为空）</span><br><span class="line"></span><br><span class="line">Your identification has been saved in /c/Users/xxxx_000/.ssh/id_rsa.   #生成的密钥</span><br><span class="line"></span><br><span class="line">Your public key has been saved in /c/Users/xxxx_000/.ssh/id_rsa.pub.  #生成的公钥</span><br><span class="line"></span><br><span class="line">The key fingerprint is:</span><br><span class="line"></span><br><span class="line">e3:51:33:xx:xx:xx:xx:xxx:61:28:83:e2:81 xxxxxx@yy.com</span><br></pre></td></tr></table></figure>
-<p>*本机已完成ssh key设置，其存放路径为：c:/Users/xxxx_000/.ssh/下。</p>
-<p>注释：可生成ssh key自定义名称的密钥，默认id_rsa。</p>
-<h4 id="4-添加-SSH-key-到-github-站点"><a href="#4-添加-SSH-key-到-github-站点" class="headerlink" title="4.添加 SSH key 到 github 站点"></a>4.添加 SSH key 到 github 站点</h4><p>4.1 登录GitHub，点击右上角账号头像的“▼”→Settings→SSH kyes→Add SSH key。</p>
-<p>4.2 复制id_rsa.pub的公钥内容</p>
-<p>(1) 查看你本地的公钥</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cat ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line">ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0X6L1zLL4VHuvGb8aJH3ippTozmReSUzgntvk434aJ/v7kOdJ/MTyBlWXFCR+HAo3FXRitBqxiX1nKhXpHAZsMciLq8vR3c8E7CjZN733f5AL8uEYJA+YZevY5UCvEg+umT7PHghKYaJwaCxV7sjYP7Z6V79OMCEAGDNXC26IBMdMgOluQjp6o6j2KAdtRBdCDS/QIU5THQDxJ9lBXjk1fiq9tITo/aXBvjZeD+gH/Apkh/0GbO8VQLiYYmNfqqAHHeXdltORn8N7C9lOa/UW3KM7QdXo6J0GFlBVQeTE/IGqhMS5PMln3 admin@admin-PC</span><br></pre></td></tr></table></figure>
-<p>(2) 复制id_rsa.pub的公钥内容，粘贴进“Key”文本域内。 title的话，起个名字可以方便自己辨认是那一台电脑的公钥。</p>
-<p>(3) 点击 Add key</p>
-<h4 id="5-测试ssh连接"><a href="#5-测试ssh连接" class="headerlink" title="5.测试ssh连接"></a>5.测试ssh连接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com </span><br><span class="line"></span><br><span class="line">Hi username! You have successfully authenticated, but GitHub does not</span><br><span class="line">provide shell access.</span><br></pre></td></tr></table></figure>
-<p>看到这个，就表示成功了。</p>
-
-          
+          注意：在 windows 下，需要先下载 git bash ，安装之后再进行以下操作
+1.配置账户123$ git config --global user.name “your_username”  #设置用户名$ git config --global user.email “your_regi
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/22/github账号在本地配置SSH key/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -937,7 +657,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://qweasd25.github.io/2017/05/22/index/">
+    <link itemprop="mainEntityOfPage" href="https://qweasd25.github.io/2017/05/22/个人博客的搭建和迁移/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="陌小念">
@@ -956,7 +676,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/05/22/index/" itemprop="url">个人博客的搭建和迁移</a></h1>
+                <a class="post-title-link" href="/2017/05/22/个人博客的搭建和迁移/" itemprop="url">个人博客的搭建和迁移</a></h1>
         
 
         <div class="post-meta">
@@ -1022,7 +742,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,600
+                  2,727
                 </span>
               
 
@@ -1038,7 +758,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  11
+                  12
                 </span>
               
             </div>
@@ -1061,89 +781,17 @@
       
         
           
-            <h2 id="最初的梦想"><a href="#最初的梦想" class="headerlink" title="最初的梦想"></a>最初的梦想</h2><pre><code>从开始接触三剑客开始，就拥有一个梦想，想要一个自己的个人网站。但是对于服务器那块，我真的有点不来san！哎呀呀土话啦！！
-</code></pre><p>在此之前，我有过很多次想要搭建个人博客的意向，看过很多篇文章，也问过远哥。噗，他的回答永远都感觉很容易。我这个人一听很容易，就不想弄了。好了废话说多了，下面进入正题。</p>
-<p>本文主要分为三个大章节：</p>
-<ol>
-<li>方法一：采用github + hexo 搭建个人博客</li>
-<li>方法二：克隆心仪的博客</li>
-<li>关于博客迁移</li>
-</ol>
-<p>好了，下面看文章吧~~</p>
-<h3 id="方法一：采用github-hexo-搭建个人博客"><a href="#方法一：采用github-hexo-搭建个人博客" class="headerlink" title="方法一：采用github + hexo 搭建个人博客"></a>方法一：采用github + hexo 搭建个人博客</h3><h4 id="1-github配置"><a href="#1-github配置" class="headerlink" title="1.github配置"></a>1.github配置</h4><h5 id="注册github账号"><a href="#注册github账号" class="headerlink" title="注册github账号"></a>注册github账号</h5><h5 id="配置SSH-Key（一般平时在github上放项目的，都是配置过的）"><a href="#配置SSH-Key（一般平时在github上放项目的，都是配置过的）" class="headerlink" title="配置SSH-Key（一般平时在github上放项目的，都是配置过的）"></a>配置SSH-Key（一般平时在github上放项目的，都是配置过的）</h5><p>不会的可以参考 <a href="https://qweasd25.github.io/2017/07/22/github%E8%B4%A6%E5%8F%B7%E5%9C%A8%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AESSH%20key/">github账号在本地配置SSH key</a></p>
-<h4 id="2-安装Hexo（点击查看官网）"><a href="#2-安装Hexo（点击查看官网）" class="headerlink" title="2.安装Hexo（点击查看官网）"></a>2.安装<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo</a>（点击查看官网）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;  # 新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-<p>新建完成后，指定文件夹的目录如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml  # 网站的 配置 信息，您可以在此配置大部分的参数。</span><br><span class="line">├── package.json  # 应用程序的信息。EJS, Stylus 和 Markdown renderer 已默认安装，您可以自由移除。</span><br><span class="line">├── scaffolds  # 模版 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</span><br><span class="line">├── source  # 资源文件夹是存放用户资源的地方。</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts  # md文件存放目录</span><br><span class="line">└── themes  # 主题 文件夹。Hexo 会根据主题来生成静态页面。</span><br></pre></td></tr></table></figure>
-<h4 id="3-本地预览"><a href="#3-本地预览" class="headerlink" title="3.本地预览"></a>3.本地预览</h4><p>运行以下命令将生成静态文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo g  # 简写</span><br></pre></td></tr></table></figure>
-<p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">$ hexo s  # 简写</span><br></pre></td></tr></table></figure>
-<p>如果端口被占用运行以下命令给该端口再启动服务器。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server -p 3000</span><br></pre></td></tr></table></figure>
-<p>在浏览器中输入 localhost:3000就可以看到博客。</p>
-<h4 id="4-主题设置"><a href="#4-主题设置" class="headerlink" title="4.主题设置"></a>4.主题设置</h4><p>这边采用<a href="http://theme-next.iissnan.com/getting-started.html#top" target="_blank" rel="noopener">NexT主题</a>（点击查看官网）</p>
-<h5 id="1-下载主题"><a href="#1-下载主题" class="headerlink" title="1.下载主题"></a>1.下载主题</h5><p>打开Git bash，在当前项目根目下使用git从github上checkout主题的代码，输入指令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-<p>下载完成后，在hexo\theme目录下回多出一个next文件夹，里面就是next主题所需的文件,当然我们也可以看到在theme文件目录还有一个landscape文件夹，这也就是hexo默认的主题。</p>
-<h5 id="2-配置主题"><a href="#2-配置主题" class="headerlink" title="2.配置主题"></a>2.配置主题</h5><p>之前我们配置hexo的时候，有用到<code>_config.yml</code>文件，称其为站点配置文件，而我们打开next主题文件夹，发现里面也有一个<code>_config.yml</code>文件，我们称这个为主题配置文件。在hexo中启用next主题的方式：就是打开站点配置文件，找到theme字段，将其值改为“next”，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme:  next</span><br></pre></td></tr></table></figure>
-<h5 id="3-next主题的样式选择"><a href="#3-next主题的样式选择" class="headerlink" title="3.next主题的样式选择"></a>3.next主题的样式选择</h5><p>next的样式其实有三种：Muse、Mist和Pisces，步骤2中看到的其实是next默认的模式Muse，根据官方说明三个样式的特点如下：<br><br>Muse： 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白<br><br>Mist： Muse 的紧凑版本，整洁有序的单栏外观<br><br>Pisces： 双栏 Scheme，小家碧玉似的清新<br><br>切换的控制其实很简单，使用next主题配置文件中的scheme字段来控制，假设我们选择Mist样式（个人认为最好看的样式），操作步骤是：打开next文件夹中的_config.yml文件，找到scheme字段，将其设置为“Mist”，如下所示：<br></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
-<h5 id="4-设置favicon"><a href="#4-设置favicon" class="headerlink" title="4.设置favicon"></a>4.设置favicon</h5><p>打开主题配置文件<code>_config.yml</code>可以看到favicon的配置信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: /images/favicon-16x16-next.png</span><br><span class="line">  medium: /images/favicon-32x32-next.png</span><br><span class="line">  apple_touch_icon: /images/apple-touch-icon-next.png</span><br><span class="line">  safari_pinned_tab: /images/logo.svg</span><br><span class="line">  #android_manifest: /images/manifest.json</span><br><span class="line">  #ms_browserconfig: /images/browserconfig.xml</span><br></pre></td></tr></table></figure>
-<h5 id="5-菜单栏控制"><a href="#5-菜单栏控制" class="headerlink" title="5.菜单栏控制"></a>5.菜单栏控制</h5><p>我们看到页面顶部的菜单栏，其实是由主题配置文件中的menu字段控制的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home</span><br><span class="line">  about: /about/ || user</span><br><span class="line">  tags: /tags/ || tags</span><br><span class="line">  categories: /categories/ || th</span><br><span class="line">  archives: /archives/ || archive</span><br><span class="line">  # schedule: /schedule/ || calendar</span><br><span class="line">  # sitemap: /sitemap.xml || sitemap</span><br><span class="line">  # commonweal: /404/ || heartbeat</span><br></pre></td></tr></table></figure>
-<p>然而，点击打开About却出现了“Cannot GET /about/”的页面错误，这是因为我们还没有about这个页面，需要使用<code>hexo new page &quot;页面名称&quot;</code>进行创建</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page about</span><br></pre></td></tr></table></figure>
-<p>执行结果就是在hexo\source目录下面多出了一个about文件夹，里面有index.md，这就是点击About会展示的内容页面。同理，也可以创建tags页面</p>
-<h5 id="6-侧栏设置"><a href="#6-侧栏设置" class="headerlink" title="6.侧栏设置"></a>6.侧栏设置</h5><p>在主题配置文件的<code>sidebar</code>字段，此处我直接设置为侧栏一直显示，而且显示在右边</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">  # Sidebar Position, available value: left | right</span><br><span class="line">  position: left</span><br><span class="line">  #position: right</span><br><span class="line"></span><br><span class="line">  # Sidebar Display, available value:</span><br><span class="line">  #  - post    expand on posts automatically. Default.</span><br><span class="line">  #  - always  expand for all pages automatically</span><br><span class="line">  #  - hide    expand only when click on the sidebar toggle icon.</span><br><span class="line">  #  - remove  Totally remove sidebar including sidebar toggler.</span><br><span class="line">  #display: post</span><br><span class="line">  display: always</span><br><span class="line">  #display: hide</span><br><span class="line">  #display: remove</span><br></pre></td></tr></table></figure>
-<h5 id="7-设置头像和作者名称"><a href="#7-设置头像和作者名称" class="headerlink" title="7.设置头像和作者名称"></a>7.设置头像和作者名称</h5><p>在站点配置文件中，新加一个字段<code>avatar</code>，值就是头像的连接地址，我没有设置，将avatar.png放到本地目录hexo\source\images中；作者名称直接设置站点配置文件中<code>author</code>字段的值：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: 时光与你有染</span><br><span class="line">subtitle:</span><br><span class="line">description:</span><br><span class="line">author: qweasd25</span><br><span class="line">avatar: /images/avatar.png</span><br><span class="line">language: zh-Hans</span><br><span class="line">timezone:</span><br></pre></td></tr></table></figure>
-<h5 id="8-给文章设置阅读量，启用不蒜子统计，仅限于文章页面显示阅读书，在首页不显示。"><a href="#8-给文章设置阅读量，启用不蒜子统计，仅限于文章页面显示阅读书，在首页不显示。" class="headerlink" title="8.给文章设置阅读量，启用不蒜子统计，仅限于文章页面显示阅读书，在首页不显示。"></a>8.给文章设置阅读量，启用不蒜子统计，仅限于文章页面显示阅读书，在首页不显示。</h5><p>在主题的配置文件找到<code>busuanzi_count</code>字段，把<code>enable</code>设置为<code>true</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># Show PV/UV of the website/page with busuanzi.</span><br><span class="line"># Get more information on http://ibruce.info/2015/04/04/busuanzi/</span><br><span class="line">busuanzi_count:</span><br><span class="line">  # count values only if the other configs are false</span><br><span class="line">  enable: true</span><br><span class="line">  # custom uv span for the whole site</span><br><span class="line">  site_uv: true</span><br><span class="line">  site_uv_header: &lt;i class=&quot;fa fa-user&quot;&gt;&lt;/i&gt;</span><br><span class="line">  site_uv_footer:</span><br><span class="line">  # custom pv span for the whole site</span><br><span class="line">  site_pv: true</span><br><span class="line">  site_pv_header: &lt;i class=&quot;fa fa-eye&quot;&gt;&lt;/i&gt;</span><br><span class="line">  site_pv_footer:</span><br><span class="line">  # custom pv span for one page only</span><br><span class="line">  page_pv: true</span><br><span class="line">  page_pv_header: &lt;i class=&quot;fa fa-file-o&quot;&gt;&lt;/i&gt;</span><br><span class="line">  page_pv_footer:</span><br></pre></td></tr></table></figure>
-<h5 id="9-Hexo-Next底部logo栏更改"><a href="#9-Hexo-Next底部logo栏更改" class="headerlink" title="9.Hexo-Next底部logo栏更改"></a>9.Hexo-Next底部logo栏更改</h5><p>首先，找到 <code>\themes\next\layout\_partials\</code>下面的<code>footer.swig</code>文件，打开把这块语句删城跟我一样，别的不用删除，尤其要注意引号，否则会出错哦~~</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.footer.powered %&#125;</span><br><span class="line">  &lt;div class=&quot;powered-by&quot;&gt;&#123;#</span><br><span class="line">  #&#125;&#123;&#123; __(&apos;footer.powered&apos;, &apos;&apos;) &#125;&#125;&#123;#</span><br><span class="line">#&#125;&lt;/div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% if theme.footer.powered and theme.footer.theme.enable %&#125;</span><br><span class="line">  &lt;span class=&quot;post-meta-divider&quot;&gt;|&lt;/span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% if theme.footer.theme.enable %&#125;</span><br><span class="line">  &lt;div class=&quot;theme-info&quot;&gt;&#123;#</span><br><span class="line">  #&#125;&#123;&#123; __(&apos;footer.theme&apos;) &#125;&#125;&#123;#</span><br><span class="line">  #&#125;&#123;#</span><br><span class="line">#&#125;&lt;/div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-<p>然后，处理中文信息，打开<code>\themes\next\languages\</code>下面的文件<code>zh-Hans.yml</code>。找到对应位置，修改成跟我类似的喔，随意发展。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">footer:</span><br><span class="line">  powered: &quot; %s 个人博客&quot;</span><br><span class="line">  theme: 前端/生活/心得</span><br></pre></td></tr></table></figure>
-<h4 id="上传到GitHub"><a href="#上传到GitHub" class="headerlink" title="上传到GitHub"></a>上传到GitHub</h4><p>在此部操作之前，建议已经把博客的配置全部设置好。</p>
-<p>相关配置可以参考着一篇文章<br><a href="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" target="_blank" rel="noopener">hexo的next主题个性化配置教程</a></p>
-<p>打开站点<code>配置文件</code>(即更目录下的<code>_config.yml</code>)，在最后修改如下代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/dracoqiu/dracoqiu.github.io.git  # 库（Repository）地址</span><br><span class="line">  branch: master  # 分支名称。如果您使用的是 GitHub 或 GitCafe 的话，程序会尝试自动检测。</span><br><span class="line">  message: [message]  # 自定义提交信息 (默认为 Site updated: &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125;)</span><br></pre></td></tr></table></figure>
-<p>每次修改本地文件都需执行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br><span class="line"># 以下为简写</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-<p>如果执行<code>$ hexo deploy</code>提示<code>ERROR Deployer not found: git</code>，则执行以下命令，再执行<code>$ hexo deploy</code>上传到GitHub</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>上传到github之后，以后想在服务器端修改直接输入命令<code>hexo d -g</code>。就可以在你的个人博客地址更新了。</p>
-<h3 id="方法二：克隆心仪的博客"><a href="#方法二：克隆心仪的博客" class="headerlink" title="方法二：克隆心仪的博客"></a>方法二：克隆心仪的博客</h3><p>本方法就相对简单一点，就是你把你心仪的个人博客github fork到你本地，然后安装之后，就可以修改一些基本配置。这样的话要改的也不多，所以更加容易点。<br>其实也是类似于下面的博客迁移啦。</p>
-<h3 id="关于博客迁移"><a href="#关于博客迁移" class="headerlink" title="关于博客迁移"></a>关于博客迁移</h3><p>此处是你已经根据上面的文章，已经成功利用hexo和github发布博客。<br>当我们更换电脑的时候，我们应该怎么办呢？</p>
-<blockquote>
-<p>具体的思路是：在生成的已经推到github上的hexo静态代码出建立一个分支，利用这个分支来管理自己hexo的源文件。</p>
-</blockquote>
-<p>如果能在刚刚配置hexo的时候就想好以后的迁移的问题就太好了，可以省掉很多麻烦，可实际使用中，刚刚配置hexo的时候，好多人都是初学，不会想到以后的问题，我就是这样的。</p>
-<p>克隆gitHub上面生成的静态文件到本地</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/yourname/xxx.github.io.git</span><br></pre></td></tr></table></figure>
-<p>把克隆到本地的文件除了git的文件都删掉，找不到git的文件的话就到删了吧。不要用<code>hexo init</code>初始化。将之前使用hexo写博客时候的整个目录（所有文件）搬过来。把该忽略的文件忽略了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch .gitignore</span><br></pre></td></tr></table></figure>
-<p>我自己忽略的是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br></pre></td></tr></table></figure></p>
-<p>创建一个叫hexo的分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b hexo</span><br></pre></td></tr></table></figure>
-<p>提交复制过来的文件到暂存区</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add --all</span><br></pre></td></tr></table></figure>
-<p>如果这个时候你发现有提示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">warning: adding embedded git repository: themes/next</span><br><span class="line">hint: You&apos;ve added another git repository inside your current repository.</span><br><span class="line">hint: Clones of the outer repository will not contain the contents of</span><br><span class="line">hint: the embedded repository and will not know how to obtain it.</span><br><span class="line">hint: If you meant to add a submodule, use:</span><br><span class="line">hint:</span><br><span class="line">hint:   git submodule add &lt;url&gt; themes/next</span><br><span class="line">hint:</span><br><span class="line">hint: If you added this path by mistake, you can remove it from the</span><br><span class="line">hint: index with:</span><br><span class="line">hint:</span><br><span class="line">hint:   git rm --cached themes/next</span><br><span class="line">hint:</span><br><span class="line">hint: See &quot;git help submodule&quot; for more information.</span><br></pre></td></tr></table></figure>
-<p>我采用了分次上传到github，记得清理下本地的git仓库缓存</p>
-<p>提交</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;新建分支源文件&quot;</span><br></pre></td></tr></table></figure>
-<p>推送分支到github</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --set-upstream origin hexo</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注：使用－－ set-upstream 去跟踪远程分支。</p>
-</blockquote>
+          最初的梦想从开始接触三剑客开始，就拥有一个梦想，想要一个自己的个人网站。但是对于服务器那块，我真的有点不来san！哎呀呀土话啦！！
+在此之前，我有过很多次想要搭建个人博客的意向，看过很多篇文章，也问过远哥。噗，他的回答永远都感觉很容易。我这个人一听很容易，就不想弄了。好了废话说多了，下面进入正题。
 
-          
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/22/个人博客的搭建和迁移/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1370,7 +1018,7 @@
     
       <span class="post-meta-item-text">博客全站字数&#58;</span>
     
-    <span title="博客全站字数">6.6k</span>
+    <span title="博客全站字数">6.7k</span>
   
 </div>
 

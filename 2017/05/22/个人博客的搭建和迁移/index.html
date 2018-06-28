@@ -89,11 +89,11 @@
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="个人博客的搭建和迁移">
-<meta property="og:url" content="https://qweasd25.github.io/2017/05/22/index/index.html">
+<meta property="og:url" content="https://qweasd25.github.io/2017/05/22/个人博客的搭建和迁移/index.html">
 <meta property="og:site_name" content="Time with you">
 <meta property="og:description" content="最初的梦想从开始接触三剑客开始，就拥有一个梦想，想要一个自己的个人网站。但是对于服务器那块，我真的有点不来san！哎呀呀土话啦！！ 在此之前，我有过很多次想要搭建个人博客的意向，看过很多篇文章，也问过远哥。噗，他的回答永远都感觉很容易。我这个人一听很容易，就不想弄了。好了废话说多了，下面进入正题。 本文主要分为三个大章节：  方法一：采用github + hexo 搭建个人博客 方法二：克隆心仪的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-28T09:18:35.000Z">
+<meta property="og:updated_time" content="2018-06-28T09:24:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人博客的搭建和迁移">
 <meta name="twitter:description" content="最初的梦想从开始接触三剑客开始，就拥有一个梦想，想要一个自己的个人网站。但是对于服务器那块，我真的有点不来san！哎呀呀土话啦！！ 在此之前，我有过很多次想要搭建个人博客的意向，看过很多篇文章，也问过远哥。噗，他的回答永远都感觉很容易。我这个人一听很容易，就不想弄了。好了废话说多了，下面进入正题。 本文主要分为三个大章节：  方法一：采用github + hexo 搭建个人博客 方法二：克隆心仪的">
@@ -126,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="https://qweasd25.github.io/2017/05/22/index/"/>
+  <link rel="canonical" href="https://qweasd25.github.io/2017/05/22/个人博客的搭建和迁移/"/>
 
 
 
@@ -271,7 +271,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://qweasd25.github.io/2017/05/22/index/">
+    <link itemprop="mainEntityOfPage" href="https://qweasd25.github.io/2017/05/22/个人博客的搭建和迁移/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="陌小念">
@@ -359,7 +359,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,600
+                  2,727
                 </span>
               
 
@@ -375,7 +375,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  11
+                  12
                 </span>
               
             </div>
@@ -443,7 +443,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.footer.powered %&#125;</span><br><span class="line">  &lt;div class=&quot;powered-by&quot;&gt;&#123;#</span><br><span class="line">  #&#125;&#123;&#123; __(&apos;footer.powered&apos;, &apos;&apos;) &#125;&#125;&#123;#</span><br><span class="line">#&#125;&lt;/div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% if theme.footer.powered and theme.footer.theme.enable %&#125;</span><br><span class="line">  &lt;span class=&quot;post-meta-divider&quot;&gt;|&lt;/span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% if theme.footer.theme.enable %&#125;</span><br><span class="line">  &lt;div class=&quot;theme-info&quot;&gt;&#123;#</span><br><span class="line">  #&#125;&#123;&#123; __(&apos;footer.theme&apos;) &#125;&#125;&#123;#</span><br><span class="line">  #&#125;&#123;#</span><br><span class="line">#&#125;&lt;/div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
 <p>然后，处理中文信息，打开<code>\themes\next\languages\</code>下面的文件<code>zh-Hans.yml</code>。找到对应位置，修改成跟我类似的喔，随意发展。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">footer:</span><br><span class="line">  powered: &quot; %s 个人博客&quot;</span><br><span class="line">  theme: 前端/生活/心得</span><br></pre></td></tr></table></figure>
-<h4 id="上传到GitHub"><a href="#上传到GitHub" class="headerlink" title="上传到GitHub"></a>上传到GitHub</h4><p>在此部操作之前，建议已经把博客的配置全部设置好。</p>
+<h4 id="10-上传到GitHub"><a href="#10-上传到GitHub" class="headerlink" title="10.上传到GitHub"></a>10.上传到GitHub</h4><p>在此部操作之前，建议已经把博客的配置全部设置好。</p>
 <p>相关配置可以参考着一篇文章<br><a href="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" target="_blank" rel="noopener">hexo的next主题个性化配置教程</a></p>
 <p>打开站点<code>配置文件</code>(即更目录下的<code>_config.yml</code>)，在最后修改如下代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/dracoqiu/dracoqiu.github.io.git  # 库（Repository）地址</span><br><span class="line">  branch: master  # 分支名称。如果您使用的是 GitHub 或 GitCafe 的话，程序会尝试自动检测。</span><br><span class="line">  message: [message]  # 自定义提交信息 (默认为 Site updated: &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125;)</span><br></pre></td></tr></table></figure>
@@ -452,6 +452,16 @@
 <p>如果执行<code>$ hexo deploy</code>提示<code>ERROR Deployer not found: git</code>，则执行以下命令，再执行<code>$ hexo deploy</code>上传到GitHub</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <p>上传到github之后，以后想在服务器端修改直接输入命令<code>hexo d -g</code>。就可以在你的个人博客地址更新了。</p>
+<h5 id="11-Hexo之next主题设置首页不显示全文-只显示预览"><a href="#11-Hexo之next主题设置首页不显示全文-只显示预览" class="headerlink" title="11.Hexo之next主题设置首页不显示全文(只显示预览)"></a>11.Hexo之next主题设置首页不显示全文(只显示预览)</h5><p>这个个人认为是最重要的一点，不然看起博客首页真的好烦躁啊。</p>
+<ul>
+<li>进入hexo博客项目的themes/next目录</li>
+<li>用文本编辑器打开_config.yml文件</li>
+<li>搜索”auto_excerpt”,找到如下部分：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommend.</span><br><span class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: true</span><br><span class="line">  length: 150</span><br></pre></td></tr></table></figure>
+<ul>
+<li>把<code>enable</code>改为对应的<code>false</code>改为<code>true</code>，然后<code>hexo d -g</code>，再进主页，问题就解决了！</li>
+</ul>
 <h3 id="方法二：克隆心仪的博客"><a href="#方法二：克隆心仪的博客" class="headerlink" title="方法二：克隆心仪的博客"></a>方法二：克隆心仪的博客</h3><p>本方法就相对简单一点，就是你把你心仪的个人博客github fork到你本地，然后安装之后，就可以修改一些基本配置。这样的话要改的也不多，所以更加容易点。<br>其实也是类似于下面的博客迁移啦。</p>
 <h3 id="关于博客迁移"><a href="#关于博客迁移" class="headerlink" title="关于博客迁移"></a>关于博客迁移</h3><p>此处是你已经根据上面的文章，已经成功利用hexo和github发布博客。<br>当我们更换电脑的时候，我们应该怎么办呢？</p>
 <blockquote>
@@ -493,12 +503,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2017/05/22/index/">个人博客的搭建和迁移</a></p>
+  <p><span>本文标题:</span><a href="/2017/05/22/个人博客的搭建和迁移/">个人博客的搭建和迁移</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 陌小念 的个人博客">陌小念</a></p>
   <p><span>发布时间:</span>2017年05月22日 - 22:05</p>
   <p><span>最后更新:</span>2018年06月28日 - 17:06</p>
-  <p><span>原始链接:</span><a href="/2017/05/22/index/" title="个人博客的搭建和迁移">https://qweasd25.github.io/2017/05/22/index/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://qweasd25.github.io/2017/05/22/index/"  aria-label="复制成功！"></i></span>
+  <p><span>原始链接:</span><a href="/2017/05/22/个人博客的搭建和迁移/" title="个人博客的搭建和迁移">https://qweasd25.github.io/2017/05/22/个人博客的搭建和迁移/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://qweasd25.github.io/2017/05/22/个人博客的搭建和迁移/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">陌小念-非商业性使用 </a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -785,7 +795,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#最初的梦想"><span class="nav-number">1.</span> <span class="nav-text">最初的梦想</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一：采用github-hexo-搭建个人博客"><span class="nav-number">1.1.</span> <span class="nav-text">方法一：采用github + hexo 搭建个人博客</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-github配置"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.github配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#注册github账号"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">注册github账号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#配置SSH-Key（一般平时在github上放项目的，都是配置过的）"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">配置SSH-Key（一般平时在github上放项目的，都是配置过的）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-安装Hexo（点击查看官网）"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.安装Hexo（点击查看官网）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-本地预览"><span class="nav-number">1.1.3.</span> <span class="nav-text">3.本地预览</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-主题设置"><span class="nav-number">1.1.4.</span> <span class="nav-text">4.主题设置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-下载主题"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">1.下载主题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-配置主题"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">2.配置主题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-next主题的样式选择"><span class="nav-number">1.1.4.3.</span> <span class="nav-text">3.next主题的样式选择</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-设置favicon"><span class="nav-number">1.1.4.4.</span> <span class="nav-text">4.设置favicon</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-菜单栏控制"><span class="nav-number">1.1.4.5.</span> <span class="nav-text">5.菜单栏控制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-侧栏设置"><span class="nav-number">1.1.4.6.</span> <span class="nav-text">6.侧栏设置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-设置头像和作者名称"><span class="nav-number">1.1.4.7.</span> <span class="nav-text">7.设置头像和作者名称</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-给文章设置阅读量，启用不蒜子统计，仅限于文章页面显示阅读书，在首页不显示。"><span class="nav-number">1.1.4.8.</span> <span class="nav-text">8.给文章设置阅读量，启用不蒜子统计，仅限于文章页面显示阅读书，在首页不显示。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-Hexo-Next底部logo栏更改"><span class="nav-number">1.1.4.9.</span> <span class="nav-text">9.Hexo-Next底部logo栏更改</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#上传到GitHub"><span class="nav-number">1.1.5.</span> <span class="nav-text">上传到GitHub</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二：克隆心仪的博客"><span class="nav-number">1.2.</span> <span class="nav-text">方法二：克隆心仪的博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于博客迁移"><span class="nav-number">1.3.</span> <span class="nav-text">关于博客迁移</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#最初的梦想"><span class="nav-number">1.</span> <span class="nav-text">最初的梦想</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一：采用github-hexo-搭建个人博客"><span class="nav-number">1.1.</span> <span class="nav-text">方法一：采用github + hexo 搭建个人博客</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-github配置"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.github配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#注册github账号"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">注册github账号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#配置SSH-Key（一般平时在github上放项目的，都是配置过的）"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">配置SSH-Key（一般平时在github上放项目的，都是配置过的）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-安装Hexo（点击查看官网）"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.安装Hexo（点击查看官网）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-本地预览"><span class="nav-number">1.1.3.</span> <span class="nav-text">3.本地预览</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-主题设置"><span class="nav-number">1.1.4.</span> <span class="nav-text">4.主题设置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-下载主题"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">1.下载主题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-配置主题"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">2.配置主题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-next主题的样式选择"><span class="nav-number">1.1.4.3.</span> <span class="nav-text">3.next主题的样式选择</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-设置favicon"><span class="nav-number">1.1.4.4.</span> <span class="nav-text">4.设置favicon</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-菜单栏控制"><span class="nav-number">1.1.4.5.</span> <span class="nav-text">5.菜单栏控制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-侧栏设置"><span class="nav-number">1.1.4.6.</span> <span class="nav-text">6.侧栏设置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-设置头像和作者名称"><span class="nav-number">1.1.4.7.</span> <span class="nav-text">7.设置头像和作者名称</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-给文章设置阅读量，启用不蒜子统计，仅限于文章页面显示阅读书，在首页不显示。"><span class="nav-number">1.1.4.8.</span> <span class="nav-text">8.给文章设置阅读量，启用不蒜子统计，仅限于文章页面显示阅读书，在首页不显示。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-Hexo-Next底部logo栏更改"><span class="nav-number">1.1.4.9.</span> <span class="nav-text">9.Hexo-Next底部logo栏更改</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-上传到GitHub"><span class="nav-number">1.1.5.</span> <span class="nav-text">10.上传到GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#11-Hexo之next主题设置首页不显示全文-只显示预览"><span class="nav-number">1.1.5.1.</span> <span class="nav-text">11.Hexo之next主题设置首页不显示全文(只显示预览)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二：克隆心仪的博客"><span class="nav-number">1.2.</span> <span class="nav-text">方法二：克隆心仪的博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于博客迁移"><span class="nav-number">1.3.</span> <span class="nav-text">关于博客迁移</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -821,7 +831,7 @@
     
       <span class="post-meta-item-text">博客全站字数&#58;</span>
     
-    <span title="博客全站字数">6.6k</span>
+    <span title="博客全站字数">6.7k</span>
   
 </div>
 
