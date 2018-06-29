@@ -4,10 +4,7 @@ date: 2017-07-22 20:43:48
 tags: SSH key
 categories: 技术
 copyright: true
-top: 100
 ---
-
-
 注意：在 windows 下，需要先下载 git bash ，安装之后再进行以下操作
 
 #### 1.配置账户
